@@ -1,4 +1,4 @@
-let textContent = "The canvas is bordered and divided horizontally and vertically into four equal parts with a black band. Each quarter has alternating parallel bands of white and color bands. Upper left: gray; upper right: yellow; lower left: red; lower right: blue.";
+let textContent = "Color bands and black blob. The wall is divided vertically into six equal bands; red; yellow; blue; orange; purple; green. In the center is a black glossy blob.";
 let lines = [];
 let colorPicker, weightSlider, clearButton, undoButton;
 let drawing = false;
