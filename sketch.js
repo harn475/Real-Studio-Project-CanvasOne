@@ -1,6 +1,8 @@
+// CONCEPTUAL
+
 let textContent = "Color bands and black blob. The wall is divided vertically into six equal bands; red; yellow; blue; orange; purple; green. In the center is a black glossy blob.";
 let lines = [];
-let colorPicker, weightSlider, clearButton, undoButton;
+let colorPicker, weightSlider, clearButton, undoButton, linkButton;
 let drawing = false;
 let drawAreaSize = 600;
 let drawAreaX, drawAreaY;
@@ -12,14 +14,21 @@ function setup() {
   
   weightSlider = createSlider(1, 10, 2);
   weightSlider.position(80, 460);
-  
+
+ // clear button
   clearButton = createButton('Clear Drawing');
   clearButton.position(10, 500);
   clearButton.mousePressed(() => lines = []);
-  
+
+ // Create undo button
   undoButton = createButton('Erase'); // changed to erase based off of function
   undoButton.position(120, 500);
   undoButton.mousePressed(() => lines.pop());
+
+ // Create the link button
+  linkButton = createButton('View Wall Drawing #901');
+  linkButton.position(10, 540);
+  linkButton.mousePressed(() => window.open('https://massmoca.org/event/walldrawing901/', '_blank'));
   
   drawAreaX = windowWidth / 2;
   drawAreaY = (windowHeight - drawAreaSize) / 2;
